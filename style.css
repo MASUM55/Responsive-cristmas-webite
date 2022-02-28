@@ -1,0 +1,397 @@
+/* table of content */
+/* ====================
+1. General
+2. navbar
+3. banner
+4. Best deals 
+5. Donate 
+6. footer 
+===================== */
+
+/* 1. General */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    /* background color */
+
+    --bg-red:#d3282e;
+    --bg-white:#fff;
+    --bg-light-white:#f6f758;
+    --bg-yellow:#fdd800;
+    --bg-green:#009900;
+
+/* text color */
+--text-black:#1f1f1f;
+--text-white: #fff;
+--text-red:#d3282e;
+--text-green:#009900;
+--text-yellow:#fdd800;
+
+
+/* fonts family */
+--primary-font:'great Vibes',cursive;
+--secondary-font: Poppins, sans-serif;
+}
+
+
+/* custom css */
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: var(--bg-white);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--bg-green);
+}
+
+.text-red{
+    color: var(--text-red);
+}
+.bg-red{
+    background-color: var(--bg-red);
+
+}
+.bg-light-white{
+    background-color: var(--bg-light-white);
+}
+.bg-green{
+    background-color: var(--bg-green);
+}
+
+.main-btn{
+    padding: 10px 25px;
+    background: var(--bg-yellow);
+    color: var(--text-black);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0 15px;
+    display: inline-block;
+    text-decoration: none;
+   -webkit-transform: perspective(1px)translateZ(0);
+    transform: perspective(1px)translateZ(0);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    position: relative;
+    overflow: hidden;
+    transition-property:color;
+    -webkit-transition-property:color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+}
+.main-btn:hover{
+    background: var(--bg-white);
+}
+.main-btn::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bg-green);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+     transition-property: transform;
+     -webkit-transition-duration:0.3s ;
+    transition-duration:0.3s ;
+    transition-timing-function: ease-out;
+    -webkit-transition-timing-function: ease-out;
+
+}
+
+.main-btn:hover::before,
+.main-btn:focus::before,
+.main-btn:active::before{
+    -webkit-transform: scale(2);
+    transform: scale(2);
+}
+
+
+/* snowflake design */
+.snowflake{
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-repeat: repeat;
+    z-index: 100000;
+    pointer-events: none;
+    -moz-animation: snow_animation 10s linear infinite;
+    -webkit-animation: snow_animation 10s linear infinite;
+    animation: snow_animation 10s linear infinite;
+
+}
+h1{
+    font-size: 80px;
+    font-family: var(--primary-font);
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: var(--text-white);
+}
+
+h2{
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 15;
+}
+h4{
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: var(--text-white);
+    margin-bottom: 15;
+}
+h5{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 15;
+}
+p{
+    margin-top: 5px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--text-white);
+}
+.text-black{
+ color: var(--text-black);
+}
+.title-box .seprator-img{
+    height: 54px;
+    width: 204px;
+    padding: 0 0 52px;
+    margin: 0 auto 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./images/images/border.png);
+}
+a{
+    text-decoration: none !important;
+}
+
+@-moz-keyframes snow_animation{
+    0%{
+        background-position: 0 0, 0 0, 0 0;
+    
+    }
+    100%{
+        background-position: 500px 3000px, 0 400px, 0 300px;
+    }
+}
+@-webkit-keyframes snow_animation{
+    0%{
+        background-position: 0 0, 0 0, 0 0;
+    
+    }
+    100%{
+        background-position: 500px 3000px, 0 400px, 0 300px;
+    }
+}
+@keyframes snow_animation{
+    0%{
+        background-position: 0 0, 0 0, 0 0;
+    
+    }
+    100%{
+        background-position: 500px 3000px, 0 400px, 0 300px;
+    }
+}
+/* 2. navbar */
+
+.header-wrapper .navbar{
+    -o-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+     transition: all .2s linear;
+
+}
+.header-wrapper .navbar-brand img{
+    max-width: 210px;
+    height: auto;
+    filter: invert(1);
+}
+.nav-item{
+    margin: 0 10px;
+}
+.nav-link{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-white);
+    line-height: 1;
+    letter-spacing: 1px;
+}
+.nav-link.active{
+    color: var(--text-yellow) !important;
+}
+.header-scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background: var(--bg-yellow)!important;
+    -webkit-box-shadow:0 4px 6px rgba(12,0,46,.05);
+     box-shadow:0 4px 6px rgba(12,0,46,.05);
+
+}
+.header-scrolled .nav-item .nav-link{
+    color: var(--text-black)!important;
+}
+.header-scrolled .active:hover{
+    color: var(--text-red)!important;
+}
+.header-scrolled .navbar-brand img{
+    filter: invert(0);
+}
+/* 3. banner */
+.banner-wrapper{
+    color: var(--text-black);
+}
+.carousel-caption{
+    bottom: 3.5rem;
+}
+
+/* 4. Best deals  */
+.deals-item{
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+.deals-item img{
+    max-width: 100%;
+    width: auto;
+    -webkit-transform-style: unset;
+    transform-style: unset;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -o-transition: all .7s;
+    -ms-transition: all .7s;
+    transition: all .7s;
+
+}
+
+.deals-item:hover img{
+    -webkit-transform: scale(1.09);
+    -moz-transform: scale(1.09);
+    -o-transform: scale(1.09);
+    -ms-transform: scale(1.09);
+    transform: scale(1.09);
+
+}
+.deals-text-right{
+    position: absolute;
+    z-index: 1;
+    right: 30px;
+}
+.deals-text-centertop{
+    position: absolute;
+    right:0;
+    left:30%;
+    top: 10%;
+}
+
+/* 5. Donate  */
+.donate-item{
+    position: relative;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+}
+.donate-item img{
+    transition: 0.3s all ease-in-out;
+}
+.donate-item img:hover{
+    transform: scale(1.2);
+}
+.donate-item:hover{
+    border-color: var(--bg-red)!important;
+}
+/* 6. footer  */
+.footer-wrapper{
+    width: 100%;
+    height: auto;
+    background-image: url(./images/images/footer-bg.png);
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0 50px;
+}
+
+.block-newsletter{
+    background-color: var(--bg-yellow);
+    overflow: hidden;
+    display: block;
+    padding: 35px 30px;
+    border-radius: 80px;
+}
+.block-newsletter input{
+    border-radius: 25px;
+    height: 50px;
+}
+.block-newsletter input:focus,
+.block-newsletter button{
+outline: none;
+box-shadow: none;
+}
+.block-newsletter button{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px 20px;
+    height: 50px;
+    line-height: 20px;
+    border-radius: 25px;
+    background-color: var(--bg-red);
+    color: var(--text-white);
+    text-transform: uppercase;
+}
+.block-newsletter button:hover{
+    background-color: var(--bg-green);
+    border-color: var(--bg-green);
+}
+
+.footer-wrapper ul li a{
+    font-size: 15px;
+    color: var(--text-white);
+    line-height: 30px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.footer-social-media-icon{
+    padding: 0;
+    border-radius: 50%;
+    height: 34px;
+    text-align: center;
+    width: 34px;
+    margin: 0 10px 10px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--text-yellow);
+    text-decoration: none;
+    align-items: center;
+    transition: all ease 1s;
+}
+.footer-social-media-icon:hover{
+background-color: var(--bg-green);
+color: var(--bg-white);
+transition: all ease 0.3s;
+}

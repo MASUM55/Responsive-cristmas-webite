@@ -1,0 +1,116 @@
+@media(max-width:1300px){
+/* custom css */
+h1{
+    font-size: 50px;
+}
+/* 2. navbar */
+.menu-navbar-nav{
+    width: auto;
+}
+}
+@media(max-width:1230px){
+    /* 2. navbar */
+  .nav-item {
+      margin: 0 5px;
+    }
+    /* 3. banner */
+    .banner-wrapper{
+        padding: 50px 0 15;
+    }
+}
+@media(max-width:1070px){
+        /* 2. navbar */
+        .nav-link {
+           font-size: 16px;
+          }
+    /* 3. banner */
+    .carousel-caption{
+        bottom: 1rem;
+    }
+    .banner-wrapper{
+        padding: 56px 0 0px;
+    }
+}
+
+@media(max-width:992.5px){
+   /* custom css */
+    h1{
+        font-size: 30px;
+
+    }
+    h3{
+        font-size: 20px;
+
+    }
+    h4{
+        font-size: 18px;
+    }
+    /* 2. navbar */
+.navbar{
+    background: var(--bg-red);
+
+}
+.header-scrolled{
+    height: auto;
+}
+
+.navbar-brand img{
+    width: 100px;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+.menu-navbar-nav{
+    text-align: center;
+}
+.nav-link{
+    margin-top: 15px;
+}
+.banner-wrapper{
+    padding: 56px 0 0px;
+}
+/* 3. footer css */
+}
+
+@media(max-width:767px){
+    .banner-wrapper{
+        padding: 56px 0 0px;
+    }
+ /* 3. footer css */
+.footer-logo img{
+   max-width: 50%;
+}
+.block-newsletter{
+border-radius: 30px;
+}
+ 
+}
+ @media(max-width:610px){
+    /* custom css */
+    .banner-wrapper{
+        padding-top: 55px;
+    }
+    h1{
+        font-size: 20px;
+
+    }
+    h3{
+        font-size: 13px;
+    }
+    .main-btn{
+        font-size: 10px !important;
+    }
+    /* top banner css */
+    .carousel-caption{
+        bottom: -0.25rem;
+    }
+    .carousel-inner{
+        height: 200px;
+    }
+    .carousel-item{
+        height: 100%;
+    }
+   
+ }
+
+ 
